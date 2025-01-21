@@ -39,9 +39,10 @@ cd humans
 git checkout v1.0.0
 ```
 
-# Build binary
+**Build binary**
+```
 make install
-
+```
 # Prepare cosmovisor directories
 mkdir -p $HOME/.humansd/cosmovisor/genesis/bin
 ln -s $HOME/.humansd/cosmovisor/genesis $HOME/.humansd/cosmovisor/current -f
