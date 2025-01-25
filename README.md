@@ -61,8 +61,10 @@ humansd config keyring-backend file
 humansd config node tcp://localhost:18457
 ```
 
-# Initialize the node
+**Initialize the node*
+```
 humansd init "Apollosync" --chain-id humans_1089-1
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots.nodejumper.io/humans/genesis.json > $HOME/.humansd/config/genesis.json
