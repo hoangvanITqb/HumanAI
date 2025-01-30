@@ -77,9 +77,10 @@ curl -L https://snapshots.nodejumper.io/humans/addrbook.json > $HOME/.humansd/co
 sed -i -e 's|^seeds *=.*|seeds = "400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@humans.rpc.kjnodes.com:12259,f8006da7d742777eeca0194b94586c8f147be4f6@humans-mainnet-seed.itrocket.net:17656,babc3f3f7804933265ec9c40ad94f4da8e9e0017@seed.rhinostake.com:18456,0e959a22dfdd34ac16f9af82d76ec6ae5f0e8e73@65.21.46.90:5256,8542cd7e6bf9d260fef543bc49e59be5a3fa9074@seed.publicnode.com:26656,ebc272824924ea1a27ea3183dd0b9ba713494f83@humans-mainnet-seed.autostake.com:27536,5e51671241340f1d1e1409a9e0cc4474820bf782@humans-mainnet-peer.itrocket.net:17656,52ce913cd01c55b9471b0d13338d6db242f7b509@humans.rpc.nodeshub.online:18456,0a1a56a1854923cd3b54edbe870d7d32ca870c4f@65.21.46.90:5656,2f8a0bf63e23606dc85bdd11afbf34e68a9f3b74@mainnet-humans.konsortech.xyz:40656"|' $HOME/.humansd/config/config.toml
 ```
 
-# Set minimum gas price
+**Set minimum gas price**
+```
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "80000000000aheart"|' $HOME/.humansd/config/app.toml
-
+```
 # Set pruning
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
