@@ -81,12 +81,14 @@ sed -i -e 's|^seeds *=.*|seeds = "400f3d9e30b69e78a7fb891f60d76fa3c73f0ecc@human
 ```
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "80000000000aheart"|' $HOME/.humansd/config/app.toml
 ```
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.humansd/config/app.toml
+```
 
 # Enable prometheus
 sed -i -e 's|^prometheus *=.*|prometheus = true|' $HOME/.humansd/config/config.toml
