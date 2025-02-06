@@ -111,7 +111,8 @@ curl "https://snapshots.nodejumper.io/humans/humans_latest.tar.lz4" | lz4 -dc - 
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.7.0
 ```
 
-# Create a service
+**Create a service**
+```
 sudo tee /etc/systemd/system/humans.service > /dev/null << EOF
 [Unit]
 Description=Humans.ai node service
@@ -132,6 +133,7 @@ WantedBy=multi-user.target
 EOF
 sudo systemctl daemon-reload
 sudo systemctl enable humans.service
+```
 
 # Start the service and check the logs
 sudo systemctl start humans.service
