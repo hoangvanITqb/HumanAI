@@ -135,10 +135,12 @@ sudo systemctl daemon-reload
 sudo systemctl enable humans.service
 ```
 
-# Start the service and check the logs
+**Start the service and check the logs**
+```
 sudo systemctl start humans.service
 sudo journalctl -u humans.service -f --no-hostname -o cat
 Secure Server Setup (Optional)
+```
 
 # generate ssh keys, if you don't have them already, DO IT ON YOUR LOCAL MACHINE
 ssh-keygen -t rsa
